@@ -48,4 +48,4 @@ function fn() {
 }
 ```
 
-图片：![小狗](http://img3.imgtn.bdimg.com/it/u=2679580243,3427682982&fm=26&gp=0.jpg ''小狗'')
+图片：![小狗](http://img3.imgtn.bdimg.com/it/u=2679580243,3427682982&fm=26&gp=0.jpg)
