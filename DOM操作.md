@@ -30,7 +30,7 @@
    var pList = document.querySelectorAll('p') // 集合
    ```
 
-   - property
+   - property  
      property: JS对象的属性
 
    ```
@@ -47,7 +47,7 @@
    console.log(p.nodeType)
    ```
 
-   - Attribute
+   - Attribute  
      Attribute: HTML标签的属性
 
    ```
