@@ -31,7 +31,7 @@
    ```
 
    - property
-    property: JS对象的属性
+     property: JS对象的属性
 
    ```
    var pList = document.querySelectorAll('p')
@@ -48,7 +48,7 @@
    ```
 
    - Attribute
-    Attribute: HTML标签的属性
+     Attribute: HTML标签的属性
 
    ```
    var pList = document.querySelectorAll('p')
