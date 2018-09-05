@@ -6,9 +6,21 @@
 
 - DOM是哪种基本的数据结构
 
+   - 树结构
+
 - DOM操作的常用API有哪些
 
+   - 获取DOM节点,以及节点的property和Attribute
+
+   - 获取父节点,获取子节点
+
+   - 新增节点,删除节点
+
 - DOM节点的attr和property有何区别
+
+   - property是对JS对象的属性进行修改和获取
+
+   - Attribute是对HTML标签属性的修改和获取
 
 **知识点**
 
