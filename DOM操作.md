@@ -104,8 +104,10 @@
 
 - 删除节点
 
-   ```javascript
+   ``` javascript
    var div1 = document.getElementById('div1')
    var child = div1.childNodes
    div1.removeChild(child[0])
    ```
+
+- [x] to-do-last
