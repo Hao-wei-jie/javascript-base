@@ -32,7 +32,7 @@
 
 - 获取DOM节点
 
-   ```
+   ``` javascript
    var div1 = document.getElementById('div1') // 元素
    var divList = document.getElementsByTagName('div') // 集合
    console.log(divList.length)
@@ -45,7 +45,7 @@
   - property  
     property: JS对象的属性
 
-   ```
+   ``` javascript
    var pList = document.querySelectorAll('p')
    var p = pList[0] // p是一个JS对象(不然JS怎么操作),JS对象是可拓展属性的  
    console.log(p.style.width) // 获取样式
@@ -62,7 +62,7 @@
   - Attribute  
     Attribute: HTML标签的属性
 
-   ```
+   ``` javascript
    var pList = document.querySelectorAll('p')
    var p = pList[0]
    p.getAttribute('data-name')
@@ -75,7 +75,7 @@
 
 - 新增节点
 
-   ```
+   ``` javascript
    var div1 = document.getElementById('div1')
    // 添加新节点
    var p1 = document.createElement('p')
@@ -88,14 +88,14 @@
 
 - 获取父元素
 
-   ```
+   ``` javascript
    var div1 = document.getElementById('div1')
    var parent = div1.parentElement
    ```
 
 - 获取子节点
 
-   ```
+   ``` javascript
    var div1 = document.getElementById('div1')
    var child = div1.childNodes
    // 注意: childNodes获取的数组里会有空字符(就是元素与元素之间的空格): #text,可以通过nodeType(或nodeName)来判断是否是元素,例:
@@ -104,7 +104,7 @@
 
 - 删除节点
 
-   ```
+   ```javascript
    var div1 = document.getElementById('div1')
    var child = div1.childNodes
    div1.removeChild(child[0])
