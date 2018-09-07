@@ -22,15 +22,15 @@
 
   - Attribute是对HTML标签属性的修改和获取
 
-**知识点**
+## 知识点
 
 ## DOM本质
 
-  - DOM可以理解为: 浏览器把拿到的HTML代码,结构化为一个浏览器能识别并且JS可操作的一个模型
+- DOM可以理解为: 浏览器把拿到的HTML代码,结构化为一个浏览器能识别并且JS可操作的一个模型
 
 ## DOM节点操作
 
-   - 获取DOM节点
+- 获取DOM节点
 
    ```
    var div1 = document.getElementById('div1') // 元素
@@ -42,8 +42,8 @@
    var pList = document.querySelectorAll('p') // 集合
    ```
 
-   - property  
-     property: JS对象的属性
+  - property  
+    property: JS对象的属性
 
    ```
    var pList = document.querySelectorAll('p')
@@ -59,8 +59,8 @@
    console.log(p.nodeType)
    ```
 
-   - Attribute  
-     Attribute: HTML标签的属性
+  - Attribute  
+    Attribute: HTML标签的属性
 
    ```
    var pList = document.querySelectorAll('p')
@@ -73,7 +73,7 @@
 
 ## DOM结构操作
 
-   - 新增节点
+- 新增节点
 
    ```
    var div1 = document.getElementById('div1')
@@ -86,14 +86,14 @@
    div1.appendChild(p2)
    ```
 
-   - 获取父元素
+- 获取父元素
 
    ```
    var div1 = document.getElementById('div1')
    var parent = div1.parentElement
    ```
 
-   - 获取子节点
+- 获取子节点
 
    ```
    var div1 = document.getElementById('div1')
@@ -102,7 +102,7 @@
    console.log(div1.childNodes[0].nodeType) // 如果打印1那说明是元素,如果打印3那说明是text
    ```
 
-   - 删除节点
+- 删除节点
 
    ```
    var div1 = document.getElementById('div1')
