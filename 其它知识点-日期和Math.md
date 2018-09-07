@@ -1,10 +1,10 @@
 # 其它知识点-日期和Math
 
-**题目**
+## 题目
 
 - 获取2017-06-10格式的日期
 
-```
+``` javascript
 function formatDate(dt) {
     if(!dt) {
         dt = new Date()
@@ -30,7 +30,7 @@ console.log(formatDate)
 
 - 获取随机数,要求是长度一致的字符串格式
 
-```
+``` javascript
 var random = Math.random()
 var random = random + '0000000000' // 后面加上10个零
 var random = random.slice(0, 10)   // 截取前10位
@@ -39,7 +39,7 @@ console.log(random)
 
 - 写一个能遍历对象和数组的通用forEach函数
 
-```
+``` javascript
 function forEach(obj, fn) {
     var key
     if(obj instanceof Array) {
@@ -67,11 +67,11 @@ forEach(obj, function(key, value) {
 })
 ```
 
-**知识点**
+## 知识点
 
 ## 日期
 
-```
+``` javascript
 Date.now() // 获取当前时间毫秒数
 var date = new Date()
 date.getTime()     // 获取毫秒数
@@ -85,13 +85,13 @@ date.getSeconds()  // 秒 (0 - 59)
 
 ## Math
 
-   - 获取随机数: Math.random() 返回一个大于0小于1的小数,一般可以清除缓存用: 将Math.random()加在链接后面
+- 获取随机数: Math.random() 返回一个大于0小于1的小数,一般可以清除缓存用: 将Math.random()加在链接后面
 
 ## 数组API
 
-   - forEach(): 遍历所有元素
+- forEach(): 遍历所有元素
 
-   ```
+   ``` javascript
    var arr = [1, 2, 3]
    arr.forEach(function(item, index) { // 先item再index
        // 遍历数组的所有元素
@@ -99,9 +99,9 @@ date.getSeconds()  // 秒 (0 - 59)
    })
    ```
 
-   - every(): 判断所有元素是否都符合条件
+- every(): 判断所有元素是否都符合条件
 
-   ```
+   ``` javascript
    var arr = [1, 2, 3]
    var result = arr.every(function(item, index) {
        // 用来判断所有的数组元素,是否都满足一个条件
@@ -112,9 +112,9 @@ date.getSeconds()  // 秒 (0 - 59)
    console.log(result) // true
    ```
 
-   - some 判断是否至少一个元素符合条件
+- some 判断是否至少一个元素符合条件
 
-   ```
+   ``` javascript
    var arr = [1, 2, 3]
    var result = arr.some(function(item, index) {
        // 用来判断所有的数组元素,只要有一个满足条件即可
@@ -125,9 +125,9 @@ date.getSeconds()  // 秒 (0 - 59)
    console.log(result) // true
    ```
 
-   - sort 从小到大排序
+- sort 从小到大排序
 
-   ```
+   ``` javascript
    var arr = [1, 4, 2, 3, 5]
    var arr2 = arr.sort(function(a, b) {
        // 从小到大排序
@@ -139,9 +139,9 @@ date.getSeconds()  // 秒 (0 - 59)
    console.log(arr2) // [1, 2, 3, 4, 5]
    ```
 
-   - map 对元素重新组装,生成新数组
+- map 对元素重新组装,生成新数组
 
-   ```
+   ``` javascript
    var arr = [1, 2, 3, 4]
    var arr2 = arr.map(function(item, index) {
        // 将元素重新组装,并返回
@@ -150,9 +150,9 @@ date.getSeconds()  // 秒 (0 - 59)
    console.log(arr2)
    ```
 
-   - filter 过滤符合条件的元素
+- filter 过滤符合条件的元素
 
-   ```
+   ``` javascript
    var arr = [1, 2, 3]
    var arr2 = arr.filter(function(item, index) {
        // 通过某一个条件过滤数组
@@ -165,7 +165,7 @@ date.getSeconds()  // 秒 (0 - 59)
 
 ## 对象API
 
-```
+``` javascript
 var obj = {
     x: 100,
     y: 200,
