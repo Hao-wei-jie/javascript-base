@@ -110,4 +110,4 @@
    div1.removeChild(child[0])
    ```
 
-- [x] to-do-last
+- [ ] to-do-last
