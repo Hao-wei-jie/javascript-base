@@ -109,5 +109,3 @@
    var child = div1.childNodes
    div1.removeChild(child[0])
    ```
-
-- [X] to-do-last
