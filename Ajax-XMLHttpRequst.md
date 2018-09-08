@@ -1,6 +1,6 @@
 # Ajax-XMLHttpRequst
 
-## **题目**
+## 题目
 
 - 手动编写一个ajax,不依赖第三方库
 
@@ -25,7 +25,7 @@ xhr.send(null)
 
   - 服务器端设置 http header
 
-## **知识点**
+## 知识点
 
 ## XMLHttpRequest
 
