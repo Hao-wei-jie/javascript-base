@@ -1,12 +1,31 @@
 # Ajax-XMLHttpRequst
 
-## 题目
+## **题目**
 
 - 手动编写一个ajax,不依赖第三方库
 
+``` javascript
+var xhr = new XMLHttpRequest()
+xhr.open("GET", "http://jsonplaceholder.typicode.com/posts", false)
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+            var string = xhr.responseText
+            var object = JSON.parse(string)
+            console.log(object[0])
+        }
+    }
+}
+xhr.send(null)
+```
+
 - 跨域的几种实现方式
 
-## 知识点
+  - JSONP
+
+  - 服务器端设置 http header
+
+## **知识点**
 
 ## XMLHttpRequest
 
@@ -17,8 +36,8 @@ xhr.onreadystatechange = function () { // 每次readystate变化都会触发事�
     // 这里是函数异步执行
     if (xhr.readyState == 4) {
         if (xhr.status == 200) {
-            let string = xhr.responseText   // xhr.responseText是响应头的第四部分
-            let object = JSON.parse(string) // 把符合 JSON 语法的字符串装换成 JS 对应的值
+            var string = xhr.responseText   // xhr.responseText是响应头的第四部分
+            var object = JSON.parse(string) // 把符合 JSON 语法的字符串装换成 JS 对应的值
             console.log(object[0])
         }
     }
@@ -66,6 +85,49 @@ status状态码:
 
     - `<script src="XXX">`
 
+  - 三个标签使用场景
+
+    - `<img>`用于打点统计,统计网站可能是其他域
+
+    - `<link>`和`<script>`可以使用CDN,CDN也是其他域
+
+    - `<script>`可以用于JSONP
+
+- 跨域注意事项
+
+  - 所有的跨域请求都必须经过信息提供方允许
+
+  - 如果未经允许即可获取,那是浏览器同源策略出现漏洞
+
 - JSONP
 
+  - 加载'http://coding.m.imooc.com/classindex.html'
+
+  - 服务器端不一定就真正有一个classindex.html文件
+
+  - 服务器可以根据请求,动态生成一个文件,然后返回
+
+  - 同理于`<script src="http://coding.m.imooc.com/api.js">`
+
+- JSONP实现原理
+
+  - 例如你的网站要跨域访问慕课网的一个接口
+
+  - 慕课网给你一个地址: "http://coding.m.imooc.com/api.js"
+
+  - 返回内容格式如: callback({x: 100, y: 200})(可动态生成)
+
+  ``` javascript
+  <script>
+  window.callback = function (data) { // 先定义一个函数,等跨域请求执行这个JS函数
+      // 这是我们跨域得到的信息
+      console.log(data)
+  }
+  </script>
+  <script src="http://coding.m.imooc.com/api.js"></script>
+  <!-- 以上将返回callback({x: 100, y: 200}) -->
+  ```
+
 - 服务器端设置 http header
+
+  - 另一个解决跨域的简洁方法,需要服务端来做,也是解决跨域问题的一个趋势
